@@ -25,6 +25,13 @@ public enum CurrencyType {
     }
 
     public static CurrencyType getTypeOfCurrency(ConvertableCurrency currency) {
-        return null;
+        return currency.getCurrencyType();
     }
+
+    public static Double convertToUniversalCurrency(ConvertableCurrency currency){
+        return CurrencyConverter.convert(1.0,currency,CurrencyType.UNIVERSAL_CURRENCY);
+    }
+
+
+
 }
